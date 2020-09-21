@@ -23,7 +23,7 @@ function setup(){
     ground = new Ground(600,height,1200,20);
 
     //platform
-    platfrm = new Ground(200,300,300,300);
+    platfrm = new Ground(150, 305, 300, 170);
     
 
     //layer1
@@ -43,8 +43,13 @@ function setup(){
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
 
+    log6=new Log(200,100,70,PI/2);
+
     //bird
     bird = new Bird(100,100);
+
+    chain = new Slingshot(bird.body,log6.body)
+
 
 }
 
@@ -65,6 +70,8 @@ function draw(){
     box5.display();
     log4.display();
     log5.display();
+    log6.display();
+    chain.display();
 
     platfrm.display();
 
